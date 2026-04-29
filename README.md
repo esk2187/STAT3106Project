@@ -5,7 +5,7 @@ This repository is for our Final Project in STAT3106 Applied Machine Learning at
 
 1. **headline_shift_FINAL.ipynb**: Python (.ipynb) script that contains instructions for parsing the headline_shift_NEW scripts and uploading Kagglehub data for uploading and cleaning. This is where we train the model and load house graph outputs.
 2. **headline_shift_NEW.zip**: zip file containing all necessary files, including:
-   - **index.html**: Technical blog post which includes relevant literature review, methods, figures/plots, results/analysis, limitations discussion, references, and appendix. This html is hosted at the link: https://esk2187.github.io/STAT3106Project/index.html
+   - **index.html**: Technical blog post which includes relevant literature review, methods, figures/plots, results/analysis, limitations discussion, references, and appendix. This html is hosted at the link: https://esk2187.github.io/STAT3106Project/headline_shift_NEW/index.html
    - **headline_shift_FINAL.ipynb**: including .ipynb within the zip
    - **outputs/** folder: includes all plots showing model performance and inferential applications. Also contains the final dataset of tested headlines with classified ideology.
    - **requirements.txt**: Python package dependencies. Install with pip install -r requirements.txt before running the pipeline locally
