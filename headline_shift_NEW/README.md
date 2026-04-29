@@ -19,7 +19,7 @@ headline_shift/
 │   ├── baseline_model.py        # TF-IDF + Logistic Regression
 │   ├── transformer_model.py     # DistilBERT + RoBERTa fine-tuning (single + dual-head)
 │   ├── hyperparam_search.py     # validation-set hyperparameter search
-│   ├── sentiment.py             # VADER sentiment scoring
+│   ├── sentiment.py             # VADER sentiment scoring (for demonstration only)
 │   ├── inference.py             # full scoring pipeline
 │   └── time_series.py           # trend analysis & visualization
 ├── app/
@@ -73,7 +73,7 @@ python run_pipeline.py --skip-transformer
 python run_pipeline.py --data-only
 ```
 
-### 4. Run hyperparameter search
+### 4. Run hyperparameter search (optional, ran once)
 
 ```python
 from src.data_loader import load_qbias, split_qbias
@@ -90,11 +90,9 @@ results = run_search(train_df, val_df, em_df, epochs=3)
 
 ### 5. Launch the annotation app
 
-```bash
-streamlit run app/active_learning_app.py
-```
+Visit the live app at: https://headline-shift.streamlit.app/
 
-Or visit the live app at: https://esk2187-mlapp.hf.space
+Note: interface does not reflect 1,095 pairwise comparisons due to a shift from temporary to permanent interface for the final submission
 
 ## Datasets
 
@@ -123,36 +121,33 @@ Hyperparameters (LR=3e-5, loss weights ideology:2.0 / emotionality:0.5) selected
 
 **Dual-head models:** DistilBERT/RoBERTa backbone with [CLS] token → ideology head (768→256→3, softmax) + emotionality head (768→128→1, sigmoid). Joint loss: 2.0 × CrossEntropy(ideology) + 0.5 × BCE(emotionality).
 
-### Sentiment: VADER
-Rule-based sentiment analyzer tuned for short text. Compound score: -1 to +1. Emotionality proxy: |compound|.
-
 ## Annotation App
-
 The Streamlit app crowdsources emotionality labels via pairwise comparison:
 - Shows pairs of headlines and asks which is more emotionally charged
 - Annotations stored persistently in Supabase (PostgreSQL)
 - Win rates converted to continuous emotionality scores
-- Live at: https://esk2187-mlapp.hf.space
 
 ## Visualizations
+The pipeline generates 12 plots saved to `outputs/plots/`:
 
-The pipeline generates 7 plots saved to `outputs/plots/`:
-
-1. **Ideology Trends** — quarterly ideology scores with 95% CI per publication
-2. **Sentiment Trends** — quarterly VADER sentiment with CI
-3. **Emotionality Trends** — VADER-based emotionality over time
-4. **Ideology by Topic** — heatmap of mean ideology score by topic × publication
-5. **Sentiment Distribution** — violin plots per publication
-6. **Ideology Distribution** — stacked bars of ideology proportions by year
-7. **Election Effect** — emotionality in election vs. non-election years
+1. **Ideology by Topic** — heatmap of mean ideology score by topic × publication
+2. **Ideology Distribution** — stacked bars of ideology proportions by year
+3. **Ideology Trends** — quarterly ideology scores with 95% CI per publication
+4. **Loss Curves** - loss curves and F1 scores by epoch for 4 transformer models
+5. **Model Architecture** - diagram of transformer model architectures
+6. **Model Comparison All Runs** - table of all models ran (including pre-tuning stage)
+7. **Model Comparison Table** - table of 5 main models
+8. **Per-class F1** - Model performance for final RoBERTa model, by class
+9. **Sentiment Trends** — quarterly VADER sentiment with CI (VADER ONLY/NOT USED - NO EMOTIONALITY GENERATED)
+10. **Sentiment Distribution** — violin plots per publication (VADER ONLY/NOT USED - NO EMOTIONALITY GENERATED)
+11. **Election Effect** — emotionality in election vs. non-election years (VADER ONLY/NOT USED - NO EMOTIONALITY GENERATED)
+12. **Emotionality Trends** — VADER-based emotionality over time (VADER ONLY/NOT USED - NO EMOTIONALITY GENERATED)
 
 ## Research Questions
-
 1. Do CNN, Fox News, WaPo, and NYT headlines show measurable ideology shifts from 2013–2022?
 2. Does joint emotionality supervision improve ideology classification? (Answer: No — robust negative result)
 3. Does backbone quality or multi-task learning dominate performance? (Answer: Backbone quality)
 4. Do ideology and sentiment patterns differ by topic area and election proximity?
 
 ## License
-
 Academic use only. Datasets subject to their own licenses.
