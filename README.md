@@ -6,6 +6,7 @@ This repository is for our Final Project in STAT3106 Applied Machine Learning at
 1. **ML Project**: A technical blog post including a project overview and literature review. 
 2. **headline_shift_NEW**: included both as a .zip for usage with Colab and a directory containing--
    - **readME.md**: a Markdown document with detailed instructions for constructing and running data processing, the active learning     interface, and the ML pipelines in Colab
+   - **outputs/** folder: includes all plots showing model performance and the final dataset of tested headlines with classified ideology and emotionality.
    - **allsides.csv**: “QBIAS Media Bias in Search Queries” dataset of 21,000+ headlines labeled left/center/right by political ideology.
    - **Various script files**: labelled, and parsed by the Colab notebook below
    - **!Excluded!**: suggestions.csv (sentimentality training file) excluded from non-compressed version of headling_shift_NEW due to size limits, but exists in the zipped file.
