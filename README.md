@@ -3,9 +3,9 @@ Sophia Berrocal, Samuel DeLong, Annie Dong, Emily Koepp
 
 This repository is for our Final Project in STAT3106 Applied Machine Learning at Columbia University. It includes the following
 
-1. **ML Project**: A full write-up for the project, including relevant literature review, methods section, and a results and limitations discussion. 
+1. **ML Project**: A full write-up for the project, including relevant literature review, methods section, figures/plots, and a results and limitations discussion. 
 2. **headline_shift_NEW**: included both as a .zip for usage with Colab and a directory containing--
-   - **readME.md**: a Markdown document with detailed instructions for constructing and running data processing, the active learning     interface, and the ML pipelines in Colab
+   - **readME.md**: a Markdown document with detailed instructions for constructing and running data processing, the active learning interface, and the ML pipelines in Colab
    - **outputs/** folder: includes all plots showing model performance and the final dataset of tested headlines with classified ideology and emotionality.
    - **allsides.csv**: “QBIAS Media Bias in Search Queries” dataset of 21,000+ headlines labeled left/center/right by political ideology.
    - **Various script files**: labelled, and parsed by the Colab notebook below
