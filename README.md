@@ -1,4 +1,4 @@
-# STAT3106Project
+# STAT3106 Project - The Headline Shift
 Sophia Berrocal, Samuel DeLong, Annie Dong, Emily Koepp
 
 This repository is for our Final Project in STAT3106 Applied Machine Learning at Columbia University. It includes the following
