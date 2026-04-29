@@ -1,10 +1,3 @@
-# The Headline Shift: Measuring Ideology and Emotionality in U.S. Online News Headlines Over Time
-
-Analyzing whether headlines from CNN, Fox News, Washington Post, and the New York Times show measurable shifts in political ideology and emotional tone from 2013–2022.
-
-**Team:** Sophie Berrocal, Sam DeLong, Annie Dong, Emily Koepp
-**Course:** Applied Machine Learning — Columbia University (STAT3106)
-
 ## Project Structure
 
 ```
