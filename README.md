@@ -4,7 +4,7 @@ Sophia Berrocal, Samuel DeLong, Annie Dong, Emily Koepp
 This repository is for our Final Project in STAT3106 Applied Machine Learning at Columbia University. It includes the following
 
 1. **index.html**: Technical blog post which includes relevant literature review, methods, figures/plots, results/analysis, limitations discussion, references, and appendix. This html is hosted at the link: https://esk2187.github.io/STAT3106Project/index.html
-2. **headline_shift_FINAL**: Python (.ipynb) script that contains instructions for parsing the headline_shift_NEW scripts and uploading Kagglehub data for uploading and cleaning
+2. **headline_shift_FINAL**: Python (.ipynb) script that contains instructions for parsing the headline_shift_NEW scripts and uploading Kagglehub data for uploading and cleaning. This is where we train the model and load house graph outputs.
 3. **headline_shift_NEW**: included both as a .zip for usage with Colab and a directory containing--
    - **readME.md**: a Markdown document with detailed instructions for constructing and running data processing, the active learning interface, and the ML pipelines in Colab
    - **outputs/** folder: includes all plots showing model performance and inferential applications. Also contains the final dataset of tested headlines with classified ideology.
