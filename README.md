@@ -18,5 +18,4 @@ This repository is for our Final Project in STAT3106 Applied Machine Learning at
    - **run_pipeline.py**: Main entry point for the full end-to-end pipeline. Accepts command-line flags to select model type, number of epochs, emotionality labels path, and whether to skip inference.
    - **README.md**: a Markdown document with detailed instructions for constructing and running data processing, the active learning interface, and the ML pipelines in Colab.
 4. **headline_shift_NEW**: included as a directory version of the zip file. Notably, this excludes the following:
-   - **scored_headlines.csv** (model-classified headline data) excluded from non-compressed version of headling_shift_NEW due to size limits, but exists in the zipped file.
    - **Kaggle-sourced data**: We use a Kaggle-sourced dataset with 4.5M headlines across the 10 largest U.S. news sites (2007–2022), from which we filter for CNN, Fox News, The Washington Post, and The New York Times in the 2013–2022 window. This is uploaded directly via JSON.
