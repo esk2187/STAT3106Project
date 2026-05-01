@@ -9,7 +9,7 @@ This repository is for our Final Project in STAT3106 Applied Machine Learning at
    - **headline_shift_FINAL.ipynb**: including .ipynb within the zip
    - **outputs** folder: includes all plots showing model performance and inferential applications. Also contains the final dataset of tested headlines with classified ideology.
    - **requirements.txt**: Python package dependencies. Install with pip install -r requirements.txt before running the pipeline locally
-   - **app** folder: contains code for active learning app. In our prototype we used this to host a locally-hosted app interface, and crucially we used this to collect our 1,095 labels. For this reason, we keep this original code for documentation purposes.However, our final, permanently-hosted app codebase can be found in the following repository (included separately so as to not interfere with the organization of the current codebase: https://github.com/dingdongtinz/headline-shift/tree/main
+   - **app** folder: contains code for active learning app. In our prototype we used this to host a locally-hosted app interface, and crucially we used this to collect our 1,095 labels. For this reason, we keep this original code for documentation purposes. However, our final, permanently-hosted app codebase can be found in the following repository: https://github.com/dingdongtinz/headline-shift/tree/main
    - **data** folder: contains data, including:
       - **qbias_clean**: “QBIAS Media Bias in Search Queries” dataset of 21,000+ headlines labeled left/center/right by political ideology.
    - **emotionality_labels_more**: 1,095 headlines hand-annotated for emotionality training signal.
@@ -19,3 +19,4 @@ This repository is for our Final Project in STAT3106 Applied Machine Learning at
    - **README.md**: a Markdown document with detailed instructions for constructing and running data processing, the active learning interface, and the ML pipelines in Colab.
 4. **headline_shift_NEW**: included as a directory version of the zip file. Notably, this excludes the following:
    - **Kaggle-sourced data**: We use a Kaggle-sourced dataset with 4.5M headlines across the 10 largest U.S. news sites (2007–2022), from which we filter for CNN, Fox News, The Washington Post, and The New York Times in the 2013–2022 window. This is uploaded directly via JSON.
+5. **perm_app**: Our final, permanently-hosted app codebase. We include it as a .zip here, but the hosting codebase can be found in the following repository (included separately so as to not interfere with the organization of the current codebase): https://github.com/dingdongtinz/headline-shift/tree/main
