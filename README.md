@@ -3,13 +3,13 @@ Sophia Berrocal, Samuel DeLong, Annie Dong, Emily Koepp
 
 This repository is for our Final Project in STAT3106 Applied Machine Learning at Columbia University. It includes the following: 
 
-1. **headline_shift_FINAL.ipynb**: Python (.ipynb) script that contains instructions for parsing the headline_shift_NEW scripts and uploading Kagglehub data for uploading and cleaning. This is where we train the model and load house graph outputs.
+1. **headline_shift_FINAL.ipynb**: Python (.ipynb) script that contains instructions for parsing the headline_shift_NEW scripts and uploading Kagglehub data for uploading and cleaning. This is where we train the model and load graph outputs.
 2. **headline_shift_NEW.zip**: zip file containing all necessary files, including:
    - **index.html**: Technical blog post which includes relevant literature review, methods, figures/plots, results/analysis, limitations discussion, references, and appendix. This html is hosted at the link: https://esk2187.github.io/STAT3106Project/headline_shift_NEW/index.html
    - **headline_shift_FINAL.ipynb**: including .ipynb within the zip
    - **outputs/** folder: includes all plots showing model performance and inferential applications. Also contains the final dataset of tested headlines with classified ideology.
    - **requirements.txt**: Python package dependencies. Install with pip install -r requirements.txt before running the pipeline locally
-   - **app** folder: contains code for active learning app.
+   - **app** folder: contains code for active learning app. Notably, this is for a temporary app interface that we used during prototyping. Our final, permanent app codebase can be found in the following repository: https://github.com/dingdongtinz/headline-shift/tree/main
    - **data** folder: contains data, including:
       - **qbias_clean**: “QBIAS Media Bias in Search Queries” dataset of 21,000+ headlines labeled left/center/right by political ideology.
    - **emotionality_labels_more**: 1,095 headlines hand-annotated for emotionality training signal.
